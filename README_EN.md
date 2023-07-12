@@ -6,7 +6,7 @@ Language: English | [Chinese](README.md)
 
 
 
-### (preview) (https://www.loadingspace.cn/)
+### [preview](https://www.loadingspace.cn/)
 
 
 

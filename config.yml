@@ -13,7 +13,7 @@ buildFuture: false
 buildExpired: false
 
 googleAnalytics:  # 谷歌统计
-# Copyright: Sulv
+# Copyright: max
 
 paginate: 10    # 首页每页显示的文章数
 summaryLength: 140 # 文章概览的自字数，默认70

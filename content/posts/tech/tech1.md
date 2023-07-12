@@ -2,7 +2,7 @@
 title: "Tech1"
 date: 2023-02-21T12:20:21+08:00
 lastmod: 2023-02-21T12:20:21+08:00
-author: ["Sulv"]
+author: ["Max"]
 keywords: 
 - 
 categories: # 没有分类界面可以不填写

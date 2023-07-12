@@ -7,7 +7,8 @@ on:
 
 jobs:
   deploy:
-    runs-on: centos:7
+    # 将作业配置为在最新版本的 Ubuntu Linux 运行器上运行,非自己的服务器版本
+    runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
         with:

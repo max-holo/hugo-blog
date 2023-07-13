@@ -22,15 +22,12 @@ hidemeta: false # 是否隐藏文章的元信息，如发布日期、作者等
 disableShare: true # 底部不显示分享栏
 showbreadcrumbs: true #顶部显示路径
 cover:
-    image: "posts/tech/tech1/1.png" #图片路径例如：posts/tech/123/123.png
+    image: "posts/tech/img/sentinel-1.png"
     zoom: "50%"
     caption: "" #图片底部描述
     alt: ""
     relative: false
 ---
-
-
-# 分享技术，用心生活
 
 > 前言：本文基于您已有基础的可运行的微服务系统，使用了Sping Cloud Alibaba，Gateway,Nacos等；目标实现网关流控类型的限流。
 

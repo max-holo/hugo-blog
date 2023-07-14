@@ -44,7 +44,7 @@ languages:
         imageWidth: 150
         imageHeight: 150
         buttons:
-          - name: 🧱 建站
+          - name: 🧱 工具
             url: posts/blog
           - name: 👨🏻‍💻 技术
             url: posts/tech
@@ -122,12 +122,10 @@ params:
       url: "img/qq.png"
     - name: WeChat
       url: "img/wechat.png"
-    - name: bilibili
-      url: "https://space.bilibili.com/234461224"
+    #- name: bilibili
+    #  url: "https://space.bilibili.com/234461224"
     - name: email
       url: "mailto:346884769@qq.com"
-    - name: RSS
-      url: "index.xml"
 
   label: # 左上角图标
     text: "Max's Blog"

@@ -1,7 +1,7 @@
 ---
 title: "🤝友链"
 layout: links
-date: 2021-11-06T15:15:53+08:00
+date: 2023-07-12T15:15:53+08:00
 description: 
 draft: false
 hidemeta: true
@@ -14,7 +14,7 @@ showbreadcrumbs: false
 
 <div class="friend">
 
-{{< friend name="Max's Blog" url="https://www.loadingspace.cn" logo="https://www.loadingspace.cn/img/Q.gif" word="分享技术，用心生活" >}}
+{{< friend name="Max's Blog" url="https://www.loadingspace.cn" logo="https://www.loadingspace.cn/img/index.gif" word="分享技术，用心生活" >}}
 
 
 </div>

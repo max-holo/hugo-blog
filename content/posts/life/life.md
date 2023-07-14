@@ -1,14 +1,14 @@
 ---
-title: "Life"
-date: 2022-05-05T00:18:15+08:00
-lastmod: 2022-05-05T00:18:15+08:00
+title: "钓鱼的技巧"
+date: 2023-07-13T00:18:15+08:00
+lastmod: 2023-07-13T00:18:15+08:00
 author: ["Max"]
 keywords: 
 - 
 categories: 
-- 
+- 钓鱼
 tags: 
-- life
+- 钓鱼
 description: ""
 weight:
 slug: ""

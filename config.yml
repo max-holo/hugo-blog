@@ -44,7 +44,7 @@ languages:
         imageHeight: 180
         buttons:
           - name: 🛠 工具
-            url: posts/blog
+            url: posts/tools
           - name: 📜 技术
             url: posts/tech
           - name: 🏝 生活

@@ -1,6 +1,6 @@
 ---
-title: "👨🏻‍💻 技术"
-# description: "不积跬步，无以至千里；不积小流，无以成江海"
-hidemeta: true # 是否隐藏文章的元信息，如发布日期、作者等
+title: "📜 技术"
+description: "实战型好文，看这里"
+#hidemeta: true # 是否隐藏文章的元信息，如发布日期、作者等
 ---
 

@@ -1,14 +1,14 @@
 ---
-title: "Blog"
-date: 2022-05-05T00:18:23+08:00
-lastmod: 2022-05-05T00:18:23+08:00
+title: "5分钟搭建一个免费图床"
+date: 2023-07-13T00:18:23+08:00
+lastmod: 2023-07-13T00:18:23+08:00
 author: ["Max"]
 keywords: 
 - 
 categories: 
 - 
 tags: 
-- blog
+- tools
 description: ""
 weight:
 slug: ""

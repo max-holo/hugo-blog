@@ -36,19 +36,18 @@ languages:
     params:
       profileMode:
         enabled: true
-        title: (〃'▽'〃)
-        subtitle:
-        # subtitle: "🧨学而时习之，不亦说乎？有朋自远方来，不亦乐乎？<br/>👇联系方式"
+        title: "(〃'▽'〃)"
+        subtitle: "👇联系方式"
         imageUrl: "img/index.gif"
         imageTitle:
-        imageWidth: 150
-        imageHeight: 150
+        imageWidth: 180
+        imageHeight: 180
         buttons:
-          - name: 🧱 工具
+          - name: 🛠 工具
             url: posts/blog
-          - name: 👨🏻‍💻 技术
+          - name: 📜 技术
             url: posts/tech
-          - name: 🏖 生活
+          - name: 🏝 生活
             url: posts/life
     menu:
       main:

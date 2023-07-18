@@ -1,3 +1,4 @@
+#example https://github.com/adityatelange/hugo-PaperMod/blob/exampleSite/config.yml
 baseURL: https://www.loadingspace.cn/ # 绑定的域名
 languageCode: zh-cn # en-us
 title: 空间加载
@@ -93,7 +94,7 @@ outputs:
 # 这里的参数会被代码以 .Site.Params 的形式读取
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: "max的个人博客，专注实战型文章，涉及微服务，java,mysql，人工智能等"
+  description: "max的个人博客，专注实战型文章，涉及微服务,架构，java,mysql，人工智能等"
   author: Max
   # author: ["Me", "You"] # multiple authors
 

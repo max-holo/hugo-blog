@@ -71,6 +71,10 @@ languages:
           name: ⏱️ 时间轴
           url: archives/
           weight: 20
+        - identifier: travel
+          name: 🚇 开往
+          url: https://www.travellings.cn/go.html
+          weight: 20
         - identifier: about
           name: 🙋🏻‍♂️ 关于
           url: about
@@ -89,7 +93,7 @@ outputs:
 # 这里的参数会被代码以 .Site.Params 的形式读取
 params:
   env: production # to enable google analytics, opengraph, twitter-cards and schema.
-  description: ""
+  description: "max的个人博客，专注实战型文章，涉及微服务，java,mysql，人工智能等"
   author: Max
   # author: ["Me", "You"] # multiple authors
 

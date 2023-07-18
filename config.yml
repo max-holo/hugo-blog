@@ -37,10 +37,10 @@ languages:
     params:
       profileMode:
         enabled: true
-        title: "(〃'▽'〃)"
-        subtitle: "👇联系方式"
+        title: ""
+        subtitle: ""
         imageUrl: "img/index.gif"
-        imageTitle:
+        imageTitle: 
         imageWidth: 180
         imageHeight: 180
         buttons:
@@ -50,6 +50,7 @@ languages:
             url: posts/tech
           - name: 🏝 生活
             url: posts/life
+#menu配置 https://gohugo.io/variables/menus/#prose
     menu:
       main:
         - identifier: search

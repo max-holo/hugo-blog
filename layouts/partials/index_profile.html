@@ -30,8 +30,9 @@
         height="{{ .imageHeight | default 150 }}" width="{{ .imageWidth | default 150 }}" />
         {{- end }}
         {{- end }}
-        <h1>{{ .title | default site.Title | markdownify }}</h1>
+        <h2>{{ .title | markdownify }}</h2>
         <span>{{ .subtitle | markdownify }}</span>
+        <span class="jinrishici-sentence">正在加载今日诗词....</span><br>
         {{- partial "social_icons.html" site.Params.socialIcons -}}
 
         {{- with .buttons }}

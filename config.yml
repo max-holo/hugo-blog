@@ -164,7 +164,7 @@ params:
 
   StartYear: 2021 # 底部开始年份
   FilingNo: 皖ICP备2021017693号-2 # 底部备案号
-  PublicSecurityIconLink: img/beian.png # 填自己的公安图标链接,可用绝对路径，相对路径如 img/beian.png
+  PublicSecurityIconLink: /img/beian.png # 填自己的公安图标链接,可用绝对路径，相对路径如 img/beian.png
   PublicNetworkSecurity: 苏公网安备 32011302321532号 # 底部公网安备号
 
   Reward: false #打赏是否开启

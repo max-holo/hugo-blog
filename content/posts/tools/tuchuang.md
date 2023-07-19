@@ -8,7 +8,8 @@ keywords:
 categories: 
 - 
 tags: 
-- tools
+- 图床
+- 博客
 description: ""
 weight:
 slug: ""
@@ -27,6 +28,8 @@ cover:
     alt: ""
     relative: false
 ---
+
+### 分享技术，用心生活
 
 > 前言：本文将实战性的实现使用七牛云搭建免费图床；并应用到自己的博客。
 

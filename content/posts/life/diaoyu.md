@@ -1,19 +1,19 @@
 ---
-title: "钓鱼的技巧"
-date: 2023-07-13T00:18:15+08:00
-lastmod: 2023-07-13T00:18:15+08:00
+title: "你真的会钓鱼吗？"
+date: 2023-07-19T13:49:01+08:00
+lastmod: 2023-07-19T13:49:01+08:00
 author: ["Max"]
 keywords: 
 - 
-categories: 
-- 钓鱼
-tags: 
-- 钓鱼
+categories: # 没有分类界面可以不填写
+- 
+tags: # 标签
+- 
 description: ""
 weight:
 slug: ""
 draft: false # 是否为草稿
-comments: true
+comments: true # 本页面是否显示评论
 reward: true # 打赏
 mermaid: true #是否开启mermaid
 showToc: true # 显示目录
@@ -23,6 +23,7 @@ disableShare: true # 底部不显示分享栏
 showbreadcrumbs: true #顶部显示路径
 cover:
     image: "" #图片路径例如：posts/tech/123/123.png
+    zoom: # 图片大小，例如填写 50% 表示原图像的一半大小
     caption: "" #图片底部描述
     alt: ""
     relative: false

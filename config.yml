@@ -89,11 +89,6 @@ languages:
           url: https://www.travellings.cn/go.html
           weight: 20
           post: "_blank"
-        - identifier: ai
-          name: 🚇 开往
-          url: https://www.travellings.cn/go.html
-          weight: 20
-          post: "_blank"
         - identifier: about
           name: 🙋🏻‍♂️ 关于
           url: about

@@ -11,7 +11,7 @@ Read https://github.com/adityatelange/hugo-PaperMod/wiki/FAQs#bundling-custom-cs
     /*--hljs-bg: rgb(35, 35, 35);*/
     --hljs-bg: rgb(44, 44, 44);
     /*--code-bg: rgb(235, 235, 235);*/
-    --code-bg: rgb(240, 240, 240);
+    --code-bg: rgb(214, 209, 209);
     --code-bg-border: rgb(200, 200, 200);
     --black: rgb(0, 0, 0);
     --white: rgb(255, 255, 255);
@@ -186,7 +186,7 @@ img:active {
 }
 
 .list {
-    background-image: url("https://img.loadingspace.cn/blog-img/blog-imgwallpaper2.jpg") !important;
+    background-image: url("") !important;
     /* 照片不重复出现 */
     background-repeat: no-repeat;
     /* 照片大小 */
@@ -196,7 +196,7 @@ img:active {
 }
 
 .dark.list {
-    background-image: url("https://img.loadingspace.cn/blog-img/592f6ffad42b8.jpg") !important;
+    background-image: url("https://img.loadingspace.cn/blog-img/blog-imgwallpaper2.jpg") !important;
     background-repeat: no-repeat;
     background-size: 100% 100%;
     background-attachment: fixed;

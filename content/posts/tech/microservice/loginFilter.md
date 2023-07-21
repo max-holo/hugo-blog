@@ -22,8 +22,8 @@ hidemeta: false # 是否隐藏文章的元信息，如发布日期、作者等
 disableShare: true # 底部不显示分享栏
 showbreadcrumbs: true #顶部显示路径
 cover:
-    image: "" #图片路径例如：posts/tech/123/123.png
-    zoom: # 图片大小，例如填写 50% 表示原图像的一半大小
+    image: "https://img.loadingspace.cn/blog-img/cover1.png" 
+    zoom: 100% # 图片大小，例如填写 50% 表示原图像的一半大小
     caption: "" #图片底部描述
     alt: ""
     relative: false
@@ -147,7 +147,7 @@ if (StringUtils.isNotEmpty(redisToken) && !redisToken.equals(token)) {
 
 前端效果
 
-![message](https://img.loadingspace.cn/blog-img/login_fail.png)
+![message](https://img.loadingspace.cn/blog-img/login_message.png)
 
 最后，扩展一下，如果要实现登录后强制修改默认密码、登录时间段限制等场景，你会怎么实现呢？
 

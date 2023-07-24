@@ -184,15 +184,15 @@ cover:
 第一个预期目标达成！
 
 
-3. 校验是否只加载了dev配置文件
+3. 校验是否只加载了local配置文件
 
-在maven面板找到`m`图标,左侧编写命令，右侧选择gateway
+切换回local，在maven面板找到`m`图标,左侧编写命令，右侧选择gateway
 ![mvn-package](https://img.loadingspace.cn/blog-img/maven-package.png)
 回车执行，等待打包完成，查看`target`目录
 
 ![target-mulu](https://img.loadingspace.cn/blog-img/target-mulu.png)
 
-完美的只加载了`bootstrap.yaml`文件，第二个预期目标达成！
+完美的只加载了`bootstrap-local.yaml`文件，第二个预期目标达成！
 
 最后，我们在切换环境时，最好点一下maven面板中的`reload`按钮，防止切换不生效。
 

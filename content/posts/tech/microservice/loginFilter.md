@@ -138,7 +138,7 @@ if (StringUtils.isNotEmpty(redisToken) && !redisToken.equals(token)) {
 这里我用用户id为4做演示
 
 先正常第一次登录,提示成功，并且redis中有1条`user`记录
-![redis_succ](https://img.loadingspace.cn/blog-img/code2.png)
+![redis_succ](https://img.loadingspace.cn/blog-img/login_success.png)
 ![redis_succ](https://img.loadingspace.cn/blog-img/redis_login.png)
 
 再次登录,我这里是返回给前端处理了，所以会有提示信息。

@@ -31,7 +31,7 @@ jobs:
         # scp方式
         # uses: garygrossgarten/github-action-scp@release # 使用 scp 工具将静态页面远程复制到 ECS
         # ftp方式
-        uses: SamKirkland/FTP-Deploy-Action@v4.3.4 # 使用 ftp 工具将静态页面远程复制到 ECS
+        uses: sebastianpopp/ftp-action@releases/v2 # 使用 ftp 工具将静态页面远程复制到 ECS
         with:
           # scp方式
           # local: public                                 # 待复制的本地文件路径

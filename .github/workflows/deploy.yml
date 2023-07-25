@@ -42,8 +42,14 @@ jobs:
           # port: ${{ secrets.PORT }}                 # scp 端口号（默认 22）
 
           # ftp方式
-          server: ${{ secrets.HOST }}
-          username: ${{ secrets.FTP_NAME }}
+          # server: ${{ secrets.HOST }}
+          # username: ${{ secrets.FTP_NAME }}
+          # password: ${{ secrets.FTP_PWD }}
+          # local-dir: public/
+          # server-dir: ./bak/
+          
+          host: ${{ secrets.HOST }}
+          user: ${{ secrets.FTP_NAME }}
           password: ${{ secrets.FTP_PWD }}
-          local-dir: public/
-          server-dir: ./bak/
+          localDir: "public/"
+          remoteDir: "/bak"

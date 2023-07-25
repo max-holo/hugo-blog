@@ -31,7 +31,7 @@ jobs:
         # scp方式
         # uses: garygrossgarten/github-action-scp@release # 使用 scp 工具将静态页面远程复制到 ECS
         # ftp方式
-        uses: sebastianpopp/ftp-action@releases/v2 # 使用 ftp 工具将静态页面远程复制到 ECS
+        uses: sand4rt/ftp-deployer@v1.7 # 使用 ftp 工具将静态页面远程复制到 ECS
         with:
           # scp方式
           # local: public                                 # 待复制的本地文件路径
@@ -48,8 +48,14 @@ jobs:
           # local-dir: public/
           # server-dir: ./bak/
           
-          host: ${{ secrets.HOST }}
-          user: ${{ secrets.FTP_NAME }}
-          password: ${{ secrets.FTP_PWD }}
-          localDir: "public/"
-          remoteDir: "/bak"
+          sftp: false # optional
+          host: ${{ secrets.HOST }} # e.g. ftp.host.com or sftp.host.com (without ftp:// or ftps://)
+          port: 21 # optional, default is: 21
+          username: ${{ secrets.FTP_NAME }} # FTP username
+          password: ${{ secrets.FTP_PWD }} # FTP password
+          remote_folder: /bak # optional, remote path of your FTP server
+          local_folder: public # optional, local path, default is: dist
+          cleanup: false # optional, remove existing files inside FTP remote folder
+          include: '[]' # optional, e.g. '['dist']'
+          exclude: '[]' # optional, e.g. '['node_modules/**', '.git/**', '*.env']'
+          passive: true # optional

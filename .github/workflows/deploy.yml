@@ -49,7 +49,7 @@ jobs:
           # server-dir: ./bak/
           
           sftp: false # optional
-          host: ${{ secrets.HOST }} # e.g. ftp.host.com or sftp.host.com (without ftp:// or ftps://)
+          host: 110.42.133.225 # e.g. ftp.host.com or sftp.host.com (without ftp:// or ftps://)
           port: 21 # optional, default is: 21
           username: ${{ secrets.FTP_NAME }} # FTP username
           password: ${{ secrets.FTP_PWD }} # FTP password

@@ -46,4 +46,4 @@ jobs:
           username: ${{ secrets.FTP_NAME }}
           password: ${{ secrets.FTP_PWD }}
           local-dir: public/
-          server-dir: www/wwwroot/www.loadingspace.cn/
+          server-dir: ./

@@ -1,4 +1,4 @@
-name: github pages
+name: hugo website 
 
 on:
   push:
@@ -28,11 +28,22 @@ jobs:
 
       # 将静态页面部署至 ECS
       - name: Deploy to ECS
-        uses: garygrossgarten/github-action-scp@release # 使用 scp 工具将静态页面远程复制到 ECS
+        # scp方式
+        # uses: garygrossgarten/github-action-scp@release # 使用 scp 工具将静态页面远程复制到 ECS
+        # ftp方式
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4 # 使用 ftp 工具将静态页面远程复制到 ECS
         with:
-          local: public                                 # 待复制的本地文件路径
-          remote: /www/wwwroot/www.loadingspace.cn                      # ECS 路径
-          host: ${{ secrets.HOST }}                     # ECS 域名 或 IP 地址
-          username: ${{ secrets.SSH_USERNAME }}         # 登录用户名
-          password: ${{ secrets.SSH_PWD }}         # 登录密码
-          port: ${{ secrets.PORT }}                 # scp 端口号（默认 22）
+          # scp方式
+          # local: public                                 # 待复制的本地文件路径
+          # remote: /www/wwwroot/www.loadingspace.cn                      # ECS 路径
+          # host: ${{ secrets.HOST }}                     # ECS 域名 或 IP 地址
+          # username: ${{ secrets.SSH_USERNAME }}         # 登录用户名
+          # password: ${{ secrets.SSH_PWD }}         # 登录密码
+          # port: ${{ secrets.PORT }}                 # scp 端口号（默认 22）
+
+          # ftp方式
+          server: ${{ secrets.HOST }}
+          username: ${{ secrets.FTP_NAME }}
+          password: ${{ secrets.FTP_PWD }}
+          local-dir: public/
+          server-dir: /www/wwwroot/www.loadingspace.cn/

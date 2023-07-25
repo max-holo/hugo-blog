@@ -42,7 +42,7 @@ jobs:
           # port: ${{ secrets.PORT }}                 # scp 端口号（默认 22）
 
           # ftp方式
-          server: 110.42.133.225
+          server: ftp://110.42.133.225/
           username: ${{ secrets.FTP_NAME }}
           password: ${{ secrets.FTP_PWD }}
           local-dir: public/

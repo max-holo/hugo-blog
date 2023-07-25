@@ -23,7 +23,7 @@ hidemeta: false # 是否隐藏文章的元信息，如发布日期、作者等
 disableShare: true # 底部不显示分享栏
 showbreadcrumbs: true #顶部显示路径
 cover:
-    image: "" #图片路径例如：posts/tech/123/123.png
+    image: "https://img.loadingspace.cn/blog-img/maven-profile.png" 
     zoom: # 图片大小，例如填写 50% 表示原图像的一半大小
     caption: "" #图片底部描述
     alt: ""
@@ -90,16 +90,18 @@ cover:
 
 配置`bootstrap.yaml`
 
-- 如果你的项目引用了`spring-boot-starter-parent`，那么需要使用`@@`；反之使用`${}`;原因是starter在其中定义了`resource-delimiter`为`@`
-
-![springboot-pom](https://img.loadingspace.cn/blog-img/pom-springboot.png)
-
-本文用的是`@@`来读取变量，使用`spring.profiles.active`来使对应的配置文件生效
    ```yml
    spring:
     profiles:
         active: @env@
    ```
+
+- 如果你的项目引用了`spring-boot-starter-parent`，那么需要使用`@@`；反之使用`${}`;原因是starter在其中定义了`resource-delimiter`为`@`
+
+![springboot-pom](https://img.loadingspace.cn/blog-img/pom-springboot.png)
+
+本文用的是`@@`来读取变量，使用`spring.profiles.active`来使对应的配置文件生效
+
 
 ### 2.2 pom配置profiles
 
@@ -161,7 +163,9 @@ cover:
 ## 3 演示效果
 配置完毕后，我们就可以在IDEA的maven面板处看到我们配置的profiles
 1. 在IDEA中选择`local`环境
+
 ![profiles](https://img.loadingspace.cn/blog-img/idea-profiles.png)
+
 2. 启动gateway
 
 从启动日志中可以看到已经加载到正确的文件

@@ -29,24 +29,24 @@ jobs:
       # 将静态页面部署至 ECS
       - name: Deploy to ECS
         # scp方式
-        # uses: garygrossgarten/github-action-scp@release # 使用 scp 工具将静态页面远程复制到 ECS
+        uses: garygrossgarten/github-action-scp@release # 使用 scp 工具将静态页面远程复制到 ECS
         # ftp方式
-        uses: SamKirkland/FTP-Deploy-Action@4.3.0 # 使用 ftp 工具将静态页面远程复制到 ECS
+        #uses: SamKirkland/FTP-Deploy-Action@4.3.0 # 使用 ftp 工具将静态页面远程复制到 ECS
         with:
           # scp方式
-          # local: public                                 # 待复制的本地文件路径
-          # remote: /www/wwwroot/www.loadingspace.cn                      # ECS 路径
-          # host: ${{ secrets.HOST }}                     # ECS 域名 或 IP 地址
-          # username: ${{ secrets.SSH_USERNAME }}         # 登录用户名
-          # password: ${{ secrets.SSH_PWD }}         # 登录密码
-          # port: ${{ secrets.PORT }}                 # scp 端口号（默认 22）
+          local: public                                 # 待复制的本地文件路径
+          remote: /www/wwwroot/www.loadingspace.cn                      # ECS 路径
+          host: ${{ secrets.HOST }}                     # ECS 域名 或 IP 地址
+          username: ${{ secrets.SSH_USERNAME }}         # 登录用户名
+          privateKey: ${{ secrets.SSH_KEY }}         # 登录密码
+          port: ${{ secrets.PORT }}                 # scp 端口号（默认 22）
 
           # ftp方式
-          server: ftp://110.42.133.225/
-          username: ${{ secrets.FTP_NAME }}
-          password: ${{ secrets.FTP_PWD }}
-          local-dir: public/
-          server-dir: ./bak/
+          # server: ftp://110.42.133.225/
+          # username: ${{ secrets.FTP_NAME }}
+          # password: ${{ secrets.FTP_PWD }}
+          # local-dir: public/
+          # server-dir: ./bak/
           
           # sftp: false # optional
           # host: 110.42.133.225 # e.g. ftp.host.com or sftp.host.com (without ftp:// or ftps://)

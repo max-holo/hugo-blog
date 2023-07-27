@@ -38,24 +38,13 @@ jobs:
           remote: /www/wwwroot/www.loadingspace.cn                      # ECS 路径
           host: ${{ secrets.HOST }}                     # ECS 域名 或 IP 地址
           username: ${{ secrets.SSH_USERNAME }}         # 登录用户名
-          privateKey: ${{ secrets.SSH_KEY }}         # 登录密码
+          privateKey: ${{ secrets.SSH_KEY }}         # 登录ssh密钥
+          # password: ${{ secrets.SSH_PWD }}         # 登录密码（密钥，密码二选一）
           port: ${{ secrets.PORT }}                 # scp 端口号（默认 22）
 
           # ftp方式
-          # server: ftp://110.42.133.225/
+          # server: ${{ secrets.HOST }}
           # username: ${{ secrets.FTP_NAME }}
           # password: ${{ secrets.FTP_PWD }}
           # local-dir: public/
           # server-dir: ./bak/
-          
-          # sftp: false # optional
-          # host: 110.42.133.225 # e.g. ftp.host.com or sftp.host.com (without ftp:// or ftps://)
-          # port: 21 # optional, default is: 21
-          # username: ${{ secrets.FTP_NAME }} # FTP username
-          # password: ${{ secrets.FTP_PWD }} # FTP password
-          # remote_folder: /bak # optional, remote path of your FTP server
-          # local_folder: public # optional, local path, default is: dist
-          # cleanup: false # optional, remove existing files inside FTP remote folder
-          # #include: '[]' # optional, e.g. '['dist']'
-          # #exclude: '[]' # optional, e.g. '['node_modules/**', '.git/**', '*.env']'
-          # passive: true # optional

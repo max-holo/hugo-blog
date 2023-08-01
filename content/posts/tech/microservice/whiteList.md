@@ -23,7 +23,7 @@ hidemeta: false # 是否隐藏文章的元信息，如发布日期、作者等
 disableShare: true # 底部不显示分享栏
 showbreadcrumbs: true #顶部显示路径
 cover:
-    image: "" #图片路径例如：posts/tech/123/123.png
+    image: "https://img.loadingspace.cn/blog-img/%E7%BD%91%E5%85%B3%E7%99%BD%E5%90%8D%E5%8D%95.jpg" 
     zoom: # 图片大小，例如填写 50% 表示原图像的一半大小
     caption: "" #图片底部描述
     alt: ""
@@ -41,6 +41,7 @@ cover:
 4. 业务处理
 
 简单的时序图
+
 
 ![时序图](https://img.loadingspace.cn/blog-img/filter_uml2.png)
 
@@ -84,8 +85,7 @@ public class AuthFilter implements WebFilter, Ordered {
     @Override
     protected Mono<Void> filter(ServerWebExchange exchange, WebFilterChain chain) {
         ServerHttpRequest request = exchange.getRequest();
-        String urlMethod = request.getURI().getPath() + request.getMethodValue();
-
+        String urlMethod = request.getURI().getPath();
         // 白名单匹配，直接放行
         for (String pattern : gateWayProperties.getWhitelist()) {
             if (pathMatcher.matchStart(pattern, urlMethod)) {
@@ -114,7 +114,7 @@ public class AuthFilter implements GlobalFilter, Ordered {
     @Override
     public Mono<Void> filter(ServerWebExchange exchange, GatewayFilterChain chain) {
         ServerHttpRequest request = exchange.getRequest();
-        String urlMethod = request.getURI().getPath() + request.getMethodValue();
+        String urlMethod = request.getURI().getPath();
 
         // 白名单匹配，直接放行
         for (String pattern : gateWayProperties.getWhitelist()) {

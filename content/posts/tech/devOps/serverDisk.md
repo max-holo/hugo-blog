@@ -8,7 +8,8 @@ keywords:
 categories: # 没有分类界面可以不填写
 - 
 tags: # 标签
-- 
+- linux
+- 运维
 description: ""
 weight:
 slug: ""
@@ -31,7 +32,7 @@ cover:
 
 ### 分享技术，用心生活
 
-有一天突然收到预警短信，显示是服务器磁盘占用100% 心里一想这事大了，得赶紧处理啊！心里还默念：问题不大，小事小事~
+有一天突然收到预警短信，显示是服务器磁盘占用100% 心里一想这事大了，得赶紧处理啊！深吸一口气默念：问题不大，小事小事~
 
 不过，线上遇到，还是挺令人头大的！
 ![](https://img.soogif.com/VrRYtg89cmtTj2yttUQ6EOg8jI7U9rtw.gif?scope=mdnice)
@@ -39,7 +40,7 @@ cover:
 先来看问题,登录上到监控台，2台报警了！
 ![](https://img.loadingspace.cn/blog-img/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230801095951.png)
 
-服务状况
+再看服务状况
 （如果是线上，那么顺序一定是先解决掉磁盘占用问题，而不是先看服务。这里为了阅读方便，先把服务情况展现出来）
 ![](https://img.loadingspace.cn/blog-img/%E5%BE%AE%E4%BF%A1%E6%88%AA%E5%9B%BE_20230731144001.png)
 

@@ -22,14 +22,14 @@ hidemeta: false # 是否隐藏文章的元信息，如发布日期、作者等
 disableShare: true # 底部不显示分享栏
 showbreadcrumbs: true #顶部显示路径
 cover:
-    image: "https://img/loadingspace.cn/blog-img/validrequest.png" #图片路径例如：posts/tech/123/123.png
+    image: "https://img.loadingspace.cn/blog-img/validrequest.png" #图片路径例如：posts/tech/123/123.png
     zoom: # 图片大小，例如填写 50% 表示原图像的一半大小
     caption: "" #图片底部描述
     alt: ""
     relative: false
 ---
 
-###分享技术，用心生活
+### 分享技术，用心生活
 --- 
 
 日常开发中，免不了需要对请求参数进行校验，诸如判空，长度，正则，集合等，复杂一点的请求参数可能会包含嵌套，分组校验。

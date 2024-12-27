@@ -8,7 +8,7 @@ on:
 jobs:
   deploy:
     # 将作业配置为在最新版本的 Ubuntu Linux 运行器上运行,非自己的服务器版本
-    runs-on: ubuntu-latest
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v3
         with:

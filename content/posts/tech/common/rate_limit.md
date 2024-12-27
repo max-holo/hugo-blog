@@ -5,12 +5,11 @@ lastmod: 2024-12-27T15:29:00+08:00
 author: ["Max"]
 keywords: 
 - AI
-- LLM
-- 大墨西哥
 categories: # 没有分类界面可以不填写
 - 
 tags: # 标签
-- 
+- 大模型
+- AI
 description: ""
 weight:
 slug: ""

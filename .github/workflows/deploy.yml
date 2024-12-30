@@ -10,27 +10,17 @@ jobs:
     # 将作业配置为在最新版本的 Ubuntu Linux 运行器上运行,非自己的服务器版本
     runs-on: ubuntu-22.04
     steps:
-      #- uses: actions/checkout@v3
-       # with:
-        #  submodules: true  # 更新子模块（hugo themes）
-        #  fetch-depth: 0
-      - name: Checkout Repo
-        uses: actions/checkout@master
+      - uses: actions/checkout@v4
         with:
-          submodules: true
+          submodules: true  # 更新子模块（hugo themes）
+          fetch-depth: 0
 
       # 配置 Hugo 环境
-      #- name: Setup Hugo
-      #  uses: peaceiris/actions-hugo@v2
-      #  with:
-      #    hugo-version: 0.115.2
-      #    extended: true
-      - name: Publish Site
-        uses: chabad360/hugo-actions@master
+      - name: Setup Hugo
+        uses: peaceiris/actions-hugo@v3
         with:
-          buildPath: '/www/wwwroot/www.loadingspace.cn'
-          hugoVersion: 'extended_0.115.2'
-          #args: --gc --minify --cleanDestinationDir
+          hugo-version: 0.115.2
+          extended: true
 
       # 构建 Hugo 静态页面
       - name: Build

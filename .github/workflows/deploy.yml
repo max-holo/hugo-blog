@@ -34,7 +34,7 @@ jobs:
         #uses: SamKirkland/FTP-Deploy-Action@4.3.0 # 使用 ftp 工具将静态页面远程复制到 ECS
         with:
           # scp方式
-          source: "public/*.md"                                 # 待复制的本地文件路径
+          source: "public/*.html"                                 # 待复制的本地文件路径
           target: /www/wwwroot/www.loadingspace.cn                      # ECS 路径
           host: ${{ secrets.HOST }}                     # ECS 域名 或 IP 地址
           username: ${{ secrets.SSH_USERNAME }}         # 登录用户名

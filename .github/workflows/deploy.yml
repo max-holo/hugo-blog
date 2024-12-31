@@ -28,16 +28,16 @@ jobs:
         with:
           node-version: '16'
           # 配置缓存
-      - name: Cache dependencies
-        uses: actions/cache@v3
-        with:
-          path: ~/.npm
-          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
-          restore-keys: |
-            ${{ runner.os }}-node-
+      # - name: Cache dependencies
+      #   uses: actions/cache@v3
+      #   with:
+      #     path: ~/.npm
+      #     key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+      #     restore-keys: |
+      #       ${{ runner.os }}-node-
             
-      - name: Run Node
-        run: npm ci
+      # - name: Run Node
+      #   run: npm ci
 
       # build hugo
       - name: Build website with Hugo

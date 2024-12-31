@@ -10,6 +10,7 @@ jobs:
     # 将作业配置为在最新版本的 Ubuntu Linux 运行器上运行,非自己的服务器版本
     runs-on: ubuntu-22.04
     steps:
+      # 检出代码
       - uses: actions/checkout@v4
         with:
           submodules: true  # 更新子模块（hugo themes）
@@ -21,30 +22,34 @@ jobs:
         with:
           hugo-version: 0.115.2
           extended: true
-
-      # 构建 Hugo 静态页面
-      - name: Build
-        run: hugo --minify
-
-      # 将静态页面部署至 ECS
-      - name: Deploy to ECS
-        # scp方式
-        uses: appleboy/scp-action@v0.1.7 # 使用 scp 工具将静态页面远程复制到 ECS
-        # ftp方式
-        #uses: SamKirkland/FTP-Deploy-Action@4.3.0 # 使用 ftp 工具将静态页面远程复制到 ECS
+          # 配置node
+      - name: Setup Node
+        uses: actions/setup-node@v3
         with:
-          # scp方式
-          source: "public/*.html"                                 # 待复制的本地文件路径
-          target: /www/wwwroot/www.loadingspace.cn                      # ECS 路径
-          host: ${{ secrets.HOST }}                     # ECS 域名 或 IP 地址
-          username: ${{ secrets.SSH_USERNAME }}         # 登录用户名
-          #privateKey: ${{ secrets.SSH_KEY }}         # 登录ssh密钥
-          password: ${{ secrets.SSH_PWD }}         # 登录密码（密钥，密码二选一）
-          port: ${{ secrets.PORT }}                 # scp 端口号（默认 22）
+          node-version: '16'
+          # 配置缓存
+      - name: Cache dependencies
+        uses: actions/cache@v2
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+            
+      - name: Run Node
+        run: npm ci
 
-          # ftp方式
-          # server: ${{ secrets.HOST }}
-          # username: ${{ secrets.FTP_NAME }}
-          # password: ${{ secrets.FTP_PWD }}
-          # local-dir: public/
-          # server-dir: ./bak/
+      # build hugo
+      - name: Build website with Hugo
+        run: hugo --minify --printI18nWarnings
+
+        # 部署网站到ecs
+      - name: Deploy website with rsync
+        uses: burnett01/rsync-deployments@7.0.1
+        with:
+          switches: -avzr --quiet --delete
+          path: public/
+          remote_path: /www/wwwroot/www.loadingspace.cn/
+          remote_host: ${{ secrets.HOST }}
+          remote_user: ${{ secrets.SSH_USERNAME }}
+          remote_key: ${{ secrets.SSH_KEY }}
